@@ -1,3 +1,13 @@
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
+
+
+var FireBaseCredential = GoogleCredential.FromFile("firebasesettings.json");
+var FireBaseApp = FirebaseApp.Create(new AppOptions()
+{
+    Credential = FireBaseCredential
+});
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
